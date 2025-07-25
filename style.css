@@ -1,0 +1,76 @@
+body {
+  overflow-x: hidden;
+  background: #f8f9fa;
+}
+
+/* Sidebar base styles */
+.sidebar {
+  height: 100vh;
+  background: #343a40;
+  color: #fff;
+  width: 220px;
+  transition: width 0.3s ease;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* Collapsed sidebar */
+.sidebar.collapsed {
+  width: 70px;
+}
+
+/* Sidebar items */
+.sidebar .nav-link {
+  color: #adb5bd;
+  display: flex;
+  align-items: center;
+  white-space: nowrap;
+  padding: 12px 15px;
+  transition: all 0.3s;
+}
+
+.sidebar .nav-link:hover {
+  background: #495057;
+  color: #fff;
+}
+
+.sidebar .nav-link i {
+  font-size: 1.3rem;
+  margin-right: 10px;
+  transition: margin 0.3s;
+}
+
+/* Hide text when collapsed */
+.sidebar.collapsed .nav-link span {
+  opacity: 0;
+  width: 0;
+  overflow: hidden;
+  transition: opacity 0.2s, width 0.3s;
+}
+
+.sidebar .nav-link span {
+  opacity: 1;
+  transition: opacity 0.3s;
+}
+
+/* Toggle button */
+.toggle-btn {
+  background: none;
+  border: none;
+  color: #fff;
+  font-size: 1.5rem;
+  margin: 10px;
+}
+
+/* Main content area */
+.main-content {
+  margin-left: 220px;
+  padding: 20px;
+  transition: margin-left 0.3s ease;
+}
+
+.sidebar.collapsed ~ .main-content {
+  margin-left: 70px;
+}
