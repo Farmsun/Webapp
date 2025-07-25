@@ -74,3 +74,25 @@ body {
 .sidebar.collapsed ~ .main-content {
   margin-left: 70px;
 }
+
+.sidebar {
+  width: 220px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background-color: #f8f9fa;
+  padding-top: 60px;
+  z-index: 1030;
+}
+
+.main-content {
+  margin-left: 220px;
+}
+
+/* For small screens: remove sidebar offset */
+@media (max-width: 767.98px) {
+  .main-content {
+    margin-left: 0;
+  }
+}
